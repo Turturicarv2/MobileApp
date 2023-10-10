@@ -15,7 +15,10 @@ context.setTransform(1, 0, 0, 1, 0, 0);
 context.clearRect(0,0,canvas.width, canvas.height);
 context.translate(centru.x/2, centru.y/2);
 context.beginPath();
-context.rect(-latura_patrat,-latura_patrat,
-latura_patrat*gamma/180, latura_patrat*gamma/180);
+var x = centru.x - 4 * abs(gamma)
+var y = centru.y - 2 * abs(gamma)
+var lungime = centru.x * 2 - 2 * x
+var latime = centru.y * 2 - 2 * y
+context.rect(x, y, latime, lungime);
 context.stroke();
 }
