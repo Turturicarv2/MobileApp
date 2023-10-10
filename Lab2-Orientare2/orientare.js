@@ -1,4 +1,4 @@
-window.addEventListener("deviceorientation", on_device_orientation);
+window.addEventListener("deviceorientation",on_device_orientation);
 function on_device_orientation(evt)
 {
 var alpha = evt.alpha;
@@ -10,13 +10,9 @@ document.getElementById("c").innerHTML = "gamma = "+gamma;
 var canvas = document.getElementById("canvas");
 var context = canvas.getContext("2d");
 var centru = {x:canvas.width/2, y:canvas.height/2}
-var lungime = 100;
-var latime = 50
-context.setTransform(1, 0, 0, 1, 0, 0);
-context.clearRect(0,0,canvas.width, canvas.height);
-context.translate(centru.x/2, centru.y/2);
-context.rotate(alpha * Math.PI / 180);
+var latura_patrat = 50;
+context.clearRect(0, 0, canvas.width, canvas.height);
+context.fillStyle = "#6A0888";
 context.beginPath();
-context.rect(-lungime/2,-latime/2,latime, lungime);
-context.stroke();
+context.fillRect(180, 150, evt.beta, 50);
 }
