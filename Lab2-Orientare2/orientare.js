@@ -16,6 +16,6 @@ context.clearRect(0,0,canvas.width, canvas.height);
 context.translate(centru.x/2, centru.y/2);
 context.beginPath();
 context.rect(-latura_patrat,-latura_patrat,
-latura_patrat*beta/180, latura_patrat*beta/180);
+latura_patrat*gamma/180, latura_patrat*gamma/180);
 context.stroke();
 }
