@@ -7,12 +7,12 @@ function on_touch()
 if(recognition.start){
 recognition.start();
 recognition_started = true;
-} else {
-recognition.stop();
-recognition_started = false;
+}
 }
 function onend()
 {
+recognition.stop();
+recognition_started = false;
 }
 recognition.onend = onend;
 recognition.onsoundend = onend;
